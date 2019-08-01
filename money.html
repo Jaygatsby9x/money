@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form>
+    Amount:<br>
+    <input type="number" id="Amount"><br>
+</form>
+From Currency:
+<select id="FromCurrency">
+    <option value="1">USD</option>
+    <option value="23000">VND</option>
+</select><br>
+To Currency:
+<select id="ToCurrency">
+    <option value="1">USD</option>
+    <option value="23000">VND</option>
+</select><br>
+<button type="button" onclick="Convert()">Convert</button>
+<script>
+    function Convert() {
+        let amount = Number(document.getElementById("Amount").value);
+        let from = document.getElementById("FromCurrency").value;
+        let to = document.getElementById("ToCurrency").value;
+        let Convert = (amount * to) / from ;
+        document.write(Convert);
+
+
+    }
+</script>
+</body>
+</html>
